@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    h1, h2, h3, h4 ,h5 ,h6 {
+        @apply font-bold
+    }
+}
+
+
+@layer components {
+    .switch-background {
+        @apply w-16 h-8 bg-toggle-light flex rounded-full
+        p-2 cursor-pointer items-center flex-row-reverse peer-checked:bg-gradient-to-r
+      from-gradient-switch-first to-gradient-switch-second peer-checked:[--bg-circle:hsl(230,17%,14%)]
+        peer-checked:[--translate-circle:_-100%]
+    }
+
+    .card-stats {
+        @apply grid grid-cols-[min-content_max-content] grid-rows-[max-content_max-content]
+        items-center justify-between gap-y-12 rounded-lg p-6 
+        w-full max-w-sm mx-auto
+    }
+
+}
+
+
+@layer utilities {
+    .degree-instagram-card {
+        background: linear-gradient(to right, red, yellow, green,orange, blue);
+    }
+}
